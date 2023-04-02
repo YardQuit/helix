@@ -53,3 +53,14 @@ name = "typescript"
 auto-format = false
 indent = {tab-width = 4, unit = "    "}
 language-server = {command = "typescript-language-server", args = ["--stdio"]}
+
+[[language]]
+name = "css"
+auto-format = false
+indent = {tab-width = 2, unit = "  "}
+
+[[language]]
+name = "html"
+auto-format = false
+indent = {tab-width = 2, unit = "  "}
+

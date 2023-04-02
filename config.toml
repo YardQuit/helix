@@ -32,10 +32,14 @@ newline = "none"
 space = " "
 tab= " "
 tabpad = " "
+# space = "·"
+# tab= "-"
+# tabpad = "-"
 
 [editor.indent-guides]
 render = false
 character = "┊"
+# skip-levels = 2
 
 [editor.lsp]
 display-messages = false
