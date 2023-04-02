@@ -1,0 +1,89 @@
+theme = "ghd"
+
+[editor]
+line-number = "relative"
+cursorline = true
+cursorcolumn = true
+mouse = false
+scrolloff = 10
+color-modes = true
+true-color = true
+rulers = [80]
+auto-save = true
+auto-info = true
+auto-completion = true
+completion-trigger-len = 2
+bufferline = "always"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = " "
+tab= " "
+tabpad = " "
+
+[editor.indent-guides]
+render = false
+character = "┊"
+
+[editor.lsp]
+display-messages = false
+
+[editor.statusline]
+left = ["mode", "spacer", "version-control", "spacer", "spinner", "diagnostics", "spacer", "file-encoding", "file-type", "file-name"]
+right = ["selections", "primary-selection-length", "spacer", "position-percentage", "position", "total-line-numbers"]
+separator = "│"
+
+[keys.normal]
+Y = "yank_main_selection_to_clipboard"
+0 = "goto_line_start"
+G = "goto_last_line"
+X = ["extend_line_above", "extend_to_line_bounds"]
+C-q = "wclose"                # close a split-window
+left = "jump_view_left"       # nav split-window mode
+down = "jump_view_down"       # nav split-window mode
+up = "jump_view_up"           # nav split-window mode
+right = "jump_view_right"     # nav split-window mode
+
+[keys.normal.g]
+q = [":reflow 80", "goto_line_start"]
+
+[keys.normal.backspace]
+c = ["kill_to_line_end", "insert_mode"]
+d = "kill_to_line_end"
+f = ":format"
+U = "switch_to_uppercase"
+u = "switch_to_lowercase"
+
+[keys.normal.backspace.t]
+s = ":toggle auto-save"
+c = ":toggle auto-completion"
+i = ":toggle indent-guides.render"
+h = ":toggle lsp.display-inlay-hints"
+
+[keys.normal.backspace.i]
+d = ":insert-output date"
+p = ":insert-output pwgen -cnys 35 1"
+l = ":insert-output python3 ~/.config/helix/scripts/ipsum.py"
+
+[keys.normal.backspace.i.t]
+p = ":insert-output cat ~/.config/helix/templates/template.python"
+c = ":insert-output cat ~/.config/helix/templates/template.clang"
+
+[keys.insert]
+
+[keys.select]
+Y = "yank_main_selection_to_clipboard"
+U = "switch_to_uppercase"
+u = "switch_to_lowercase"
