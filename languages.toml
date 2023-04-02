@@ -1,0 +1,306 @@
+################################################################################
+# LANGUAGE SERVERS
+################################################################################
+# RUST-ANALYZER
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[language-server.rust-analyzer.config]
+checkOnSave = {enable = true, command = "clippy"}
+
+# LTEX-LS
+# ltex-ls binary: https://github.com/valentjn/ltex-ls/releases
+# mv extracted foler to /opt named as ltex-ls
+# PATH="/opt/ltex-ls/bin:$PATH"
+[language-server.ltex-ls]
+command = "ltex-ls"
+
+[language-server.ltex-ls.config]
+ltex.language = "en-US"
+ltex.dictionary = ":~/.config/helix/ltex.dictionary.en-US.txt"
+
+# PYLSP
+[language-server.pylsp]
+command = "pylsp"
+
+# CLANGD
+[language-server.clangd]
+command = "clangd"
+
+# BASH-LANGUAGE-SERVER
+[language-server.bash-language-server]
+command = "bash-language-server"
+
+# AWK-LANGUAGE-SERVER
+[language-server.awk-language-server]
+command = "awk-language-server"
+
+# VSCODE-CSS-LANGUAGE-SERVER
+[language-server.vscode-css-language-server]
+command = "vscode-css-language-server"
+
+# VSCODE-HTML-LANGUAGE-SERVER
+[language-server.vscode-html-language-server]
+command = "vscode-html-language-server"
+
+# VSCODE-JSON-LANGUAGE-SERVER
+[language-server.vscode-json-language-server]
+command = "vscode-json-language-server"
+
+# TYPESCRIPT-LANGUAGE-SERVER
+[language-server.typescript-language-server]
+command = "typescript-language-server"
+args = ["--stdio"]
+
+# YAML-LANGUAGE-SERVER
+[language-server.yaml-language-server]
+command = "yaml-language-server"
+
+[language-server.yaml-language-server.config]
+yaml = {keyOrdering = false}
+
+# OLS
+[language-server.ols]
+command = "ols"
+
+# TAPLO
+[language-server.taplo]
+command = "taplo lsp stdio"
+
+# ZLS
+[language-server.zls]
+command = "zls"
+
+# LUA-LANGUAGE-SERVER
+[language-server.lua-language-server]
+command = "lua-language-server"
+
+# GOPLS
+[language-server.gopls]
+command = "gopls"
+
+# TEXLAB
+[language-server.texlab]
+command = "texlab"
+
+################################################################################
+# LANGUAGES
+################################################################################
+# RUST
+[[language]]
+name = "rust"
+auto-format = false
+language-servers = [{name = "rust-analyzer"}]
+indent = {tab-width = 4, unit = "    "}
+roots = ["Cargo.toml", "Cargo.lock", "Workspace.toml", ".git"]
+rulers = [80]
+
+# MARKDOWN
+[[language]]
+name = "markdown"
+auto-format = false
+language-servers = [{name = "ltex-ls"}]
+indent = {tab-width = 4, unit = "    "}
+file-types = ["md", "txt"]
+rulers = [80]
+
+# GIT
+[[language]]
+name = "git-commit"
+auto-format = false
+language-servers = [{name = "ltex-ls"}]
+indent = {tab-width = 4, unit = "    "}
+rulers = [80]
+
+# LATEX
+[[language]]
+name = "latex"
+language-servers = [{name = "ltex-ls"}]
+indent = {tab-width = 2, unit = "  "}
+file-types = ["tex"]
+text-width = 78
+rulers = [78]
+
+# PYTHON
+[[language]]
+name = "python"
+auto-format = false
+language-servers = [{name = "pylsp"}]
+formatter = {command = "black", args = ["--quiet", "-"]}
+indent = {tab-width = 4, unit = "    "}
+shebangs = ["python"]
+
+# C
+[[language]]
+name = "c"
+language-servers = [{name = "clangd"}]
+auto-format = false
+indent = {tab-width = 4, unit = "    "}
+file-types = ["c", "h"]
+
+# CPP
+[[language]]
+name = "cpp"
+language-servers = [{name = "clangd"}]
+auto-format = false
+indent = {tab-width = 4, unit = "    "}
+file-types = ["c", "h"]
+
+# BASH
+[[language]]
+name = "bash"
+auto-format = false
+# language-servers = [
+#     {name = "bash-language-server"}, 
+#     {name = "awk-language-server"}]
+language-servers = [
+    {name = "bash-language-server"}]
+formatter = {command = 'shfmt', args = ["-i", "4"]}
+indent = {tab-width = 4, unit = "    "}
+shebangs = ["sh", "bash", "zsh", "dash"]
+
+# AWK
+[[language]]
+name = "awk"
+auto-format = false
+# language-servers = [
+#     {name = "awk-language-server"}, 
+#     {name = "bash-language-server"}]
+language-servers = [
+    {name = "awk-language-server"}]
+formatter = {command = 'shfmt', args = ["-i", "4"]}
+indent = {tab-width = 4, unit = "    "}
+
+# CSS
+[[language]]
+name = "css"
+auto-format = false
+language-servers = [{name = "vscode-css-language-server"}]
+formatter = { command = "prettier", args = ["--parser", "typescript"]}
+indent = {tab-width = 2, unit = "  "}
+
+# HTML
+[[language]]
+name = "html"
+auto-format = false
+language-servers = [{name = "vscode-html-language-server"}]
+formatter = { command = "prettier", args = ["--parser", "typescript"]}
+indent = {tab-width = 2, unit = "  "}
+
+# JSON
+[[language]]
+name = "json"
+auto-format = false
+language-servers = [{name = "vscode-json-language-server"}]
+formatter = { command = "prettier", args = ["--parser", "typescript"]}
+indent = {tab-width = 2, unit = "  "}
+
+# TYPESCRIPT
+[[language]]
+name = "typescript"
+auto-format = false
+language-servers = [{name = "typescript-language-server"}]
+indent = {tab-width = 4, unit = "    "}
+
+# TSX
+[[language]]
+name = "tsx"
+auto-format = false
+language-servers = [{name = "typescript-language-server"}]
+formatter = { command = "prettier", args = ["--parser", "typescript"]}
+indent = {tab-width = 2, unit = "  "}
+
+# JSX
+[[language]]
+name = "jsx"
+auto-format = false
+language-servers = [{name = "typescript-language-server"}]
+formatter = { command = "prettier", args = ["--parser", "typescript"]}
+indent = {tab-width = 2, unit = "  "}
+
+# JAVASCRIPT
+[[language]]
+name = "javascript"
+auto-format = false
+language-servers = [{name = "typescript-language-server"}]
+formatter = { command = "prettier", args = ["--parser", "typescript"]}
+indent = {tab-width = 2, unit = "  "}
+
+# YAML
+[[language]]
+name = "yaml"
+auto-format = false
+language-servers = [{name = "yaml-language-server"}]
+formatter = { command = "prettier", args = ["--parser", "typescript"]}
+indent = {tab-width = 2, unit = "  "}
+
+# ODIN
+[[language]]
+name = "odin"
+language-servers = [{ name = "ols" }]
+auto-format = true
+formatter = { command = "odinfmt", args = ["-stdin", "true" ]}
+indent = { tab-width = 2, unit = " " }
+roots = ["ols.json"]
+injection-regex = "odin"
+scope = "scope.odin"
+file-types = ["odin"]
+comment-token = "//"
+
+# TOML
+[[language]]
+name = "toml"
+auto-format = false
+language-servers = [{name = "taplo"}]
+formatter = { command = "prettier", args = ["--parser", "typescript"]}
+indent = {tab-width = 4, unit = "    "}
+
+# ZIG
+[[language]]
+name = "zig"
+auto-format = true
+language-servers = [{name = "zls"}]
+indent = {tab-width = 4, unit = "    "}
+
+# LUA
+[[language]]
+name = "lua"
+auto-format = true
+language-servers = [{name = "lua-language-server"}]
+indent = {tab-width = 4, unit = "    "}
+
+# GO
+[[language]]
+name = "go"
+auto-format = false
+language-servers = [{name = "gopls"}]
+indent = {tab-width = 4, unit = "    "}
+
+# GOMOD
+[[language]]
+name = "gomod"
+auto-format = false
+language-servers = [{name = "gopls"}]
+indent = {tab-width = 4, unit = "    "}
+
+# GOTMPL
+[[language]]
+name = "gotmpl"
+auto-format = false
+language-servers = [{name = "gopls"}]
+indent = {tab-width = 4, unit = "    "}
+
+# GOWORK
+[[language]]
+name = "gowork"
+auto-format = false
+language-servers = [{name = "gopls"}]
+indent = {tab-width = 4, unit = "    "}
+
+# BIBTEX
+[[language]]
+name = "bibtex"
+auto-format = true
+language-servers = [{name = "texlab"}]
+indent = {tab-width = 4, unit = "    "}
+

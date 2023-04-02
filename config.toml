@@ -1,0 +1,131 @@
+theme = "ghd_soft"
+
+[editor]
+line-number = "relative"
+cursorline = true
+cursorcolumn = true
+mouse = false
+scrolloff = 15
+color-modes = true
+true-color = true
+rulers = [80]
+text-width = 80
+auto-save = true
+auto-info = true
+auto-completion = true
+completion-trigger-len = 2
+completion-replace = true
+bufferline = "always"
+# lsp.auto-signature-help = false
+
+[editor.smart-tab]
+enable = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = " "
+tab= " "
+tabpad = " "
+# space = "·"
+# tab= "-"
+# tabpad = "-"
+
+[editor.indent-guides]
+render = true
+character = "┊"
+
+[editor.lsp]
+display-messages = false
+display-inlay-hints = true
+
+
+[editor.statusline]
+left = ["mode", "spacer", "version-control", "spacer", "spinner", "diagnostics", "spacer", "file-encoding", "file-type", "file-modification-indicator", "file-name"]
+right = ["selections", "primary-selection-length", "spacer", "position-percentage", "position", "total-line-numbers"]
+separator = "│"
+
+[keys.normal]
+x = "no_op" # is remapped to V
+V = "extend_line_below" # remapped from x
+Y = "yank_main_selection_to_clipboard"
+0 = "goto_line_start"
+G = ["goto_last_line", "align_view_center"]
+a = ["move_char_right", "insert_mode"]
+A-C-h = "wclose"              # close a split-window
+A-C-l = ":vnew"               # vertical split new
+A-C-j = ":hnew"               # horizontal new
+left = "jump_view_left"       # nav split-window mode
+down = "jump_view_down"       # nav split-window mode
+up = "jump_view_up"           # nav split-window mode
+right = "jump_view_right"     # nav split-window mode
+C-h = ":buffer-next"          # nav next buffer
+C-l = ":buffer-previous"      # nav pervious buffer
+"A-k" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+"A-j" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+
+[keys.normal.g]
+q = [":reflow 80", "goto_line_start"]
+f = [":reflow 78", "goto_line_start"]
+
+[keys.normal.backspace]
+c = ["select_mode", "goto_line_end", "yank", "delete_selection", "insert_mode"]
+A = ["select_mode", "goto_line_start", "yank", "delete_selection", "insert_mode"]
+d = ["select_mode", "goto_line_end", "yank", "delete_selection"]
+a = ["select_mode", "goto_line_start", "yank", "delete_selection"]
+s = "split_selection_on_newline"
+f = ":format"
+U = "switch_to_uppercase"
+u = "switch_to_lowercase"
+p = ":sh pwd"
+l = "insert_newline"
+# backspace = [":write", ":sh alacritty --command sh"]
+# backspace = [":write", ":sh $TERM --app-id='scratchpad_foot' &disown"]
+# backspace = [":write", ":sh foot --app-id='float_foot'"]
+backspace = [":write", ":sh gnome-terminal"]
+
+[keys.normal.backspace.t]
+s = ":toggle auto-save"
+c = ":toggle auto-completion"
+i = ":toggle indent-guides.render"
+h = ":toggle lsp.display-inlay-hints"
+w = ":toggle soft-wrap.enable"
+
+[keys.normal.backspace.i]
+d = ":insert-output date"
+p = ":insert-output pwgen -cnys 35 1"
+l = ":insert-output python3 ~/.config/helix/scripts/ipsum.py"
+
+[keys.normal.backspace.i.t]
+p = ":insert-output cat ~/.config/helix/templates/template.python"
+c = ":insert-output cat ~/.config/helix/templates/template.clang"
+
+[keys.normal.backspace.i.s]
+p = ":insert-output cat ~/.config/helix/templates/md-snip.python"
+b = ":insert-output cat ~/.config/helix/templates/md-snip.bash"
+c = ":insert-output cat ~/.config/helix/templates/md-snip.clang"
+r = ":insert-output cat ~/.config/helix/templates/md-snip.rust"
+
+[keys.insert] 
+"A-k" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+"A-j" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+
+[keys.select]
+Y = "yank_main_selection_to_clipboard"
+U = "switch_to_uppercase"
+u = "switch_to_lowercase"
+x = "no_op" # remapped to V
+V = "extend_line_below" # remapped from x
+A-x = "no_op" # remapped to Alt-v
+A-v = "shrink_to_line_bounds" # remapped from Alt-x
