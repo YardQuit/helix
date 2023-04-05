@@ -9,10 +9,12 @@ scrolloff = 10
 color-modes = true
 true-color = true
 rulers = [80]
+text-width = 80
 auto-save = true
 auto-info = true
 auto-completion = true
 completion-trigger-len = 2
+completion-replace = true
 bufferline = "always"
 
 [editor.cursor-shape]
@@ -39,13 +41,12 @@ tabpad = " "
 [editor.indent-guides]
 render = false
 character = "┊"
-# skip-levels = 2
 
 [editor.lsp]
 display-messages = false
 
 [editor.statusline]
-left = ["mode", "spacer", "version-control", "spacer", "spinner", "diagnostics", "spacer", "file-encoding", "file-type", "file-name"]
+left = ["mode", "spacer", "version-control", "spacer", "spinner", "diagnostics", "spacer", "file-encoding", "file-type", "file-modification-indicator", "file-name"]
 right = ["selections", "primary-selection-length", "spacer", "position-percentage", "position", "total-line-numbers"]
 separator = "│"
 
@@ -69,6 +70,9 @@ d = "kill_to_line_end"
 f = ":format"
 U = "switch_to_uppercase"
 u = "switch_to_lowercase"
+X = ":q!"
+W = ":wq"
+w = ":w"
 
 [keys.normal.backspace.t]
 s = ":toggle auto-save"
