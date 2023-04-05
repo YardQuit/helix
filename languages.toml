@@ -8,6 +8,7 @@ file-types = ["c", "h"]
 name = "rust"
 auto-format = false
 indent = {tab-width = 4, unit = "    "}
+roots = ["Cargo.lock"]
 [language.config]
 checkOnSave = {enable=true, command="clippy"}
 
@@ -29,6 +30,8 @@ auto-format = false
 language-server = {command = "ltex-ls"}
 indent = {tab-width = 4, unit = "    "}
 file-types = ["md", "txt"]
+[[language.config]]
+ltex.language = "en-US"
 
 [[language]]
 name = "git-commit"
@@ -63,4 +66,3 @@ indent = {tab-width = 2, unit = "  "}
 name = "html"
 auto-format = false
 indent = {tab-width = 2, unit = "  "}
-
