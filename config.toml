@@ -44,9 +44,10 @@ character = "┊"
 
 [editor.lsp]
 display-messages = false
+display-inlay-hints = true
 
 [editor.statusline]
-left = ["mode", "spacer", "version-control", "spacer", "spinner", "diagnostics", "spacer", "file-encoding", "file-type", "file-modification-indicator", "file-name"]
+left = ["mode", "spacer", "version-control", "spacer", "spinner", "diagnostics", "spacer", "file-encoding", "file-type", "file-modification-indicator", "file-base-name"]
 right = ["selections", "primary-selection-length", "spacer", "position-percentage", "position", "total-line-numbers"]
 separator = "│"
 
@@ -88,6 +89,12 @@ l = ":insert-output python3 ~/.config/helix/scripts/ipsum.py"
 [keys.normal.backspace.i.t]
 p = ":insert-output cat ~/.config/helix/templates/template.python"
 c = ":insert-output cat ~/.config/helix/templates/template.clang"
+
+[keys.normal.backspace.i.s]
+p = ":insert-output cat ~/.config/helix/templates/md-snip.python"
+b = ":insert-output cat ~/.config/helix/templates/md-snip.bash"
+c = ":insert-output cat ~/.config/helix/templates/md-snip.clang"
+r = ":insert-output cat ~/.config/helix/templates/md-snip.rust"
 
 [keys.insert]
 
