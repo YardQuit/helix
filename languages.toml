@@ -7,8 +7,9 @@ file-types = ["c", "h"]
 [[language]]
 name = "rust"
 auto-format = false
+language-server = {command = "rust-analyzer"}
 indent = {tab-width = 4, unit = "    "}
-roots = ["Cargo.lock"]
+roots = ["Cargo.lock", "Cargo.toml"]
 [language.config]
 checkOnSave = {enable=true, command="clippy"}
 
@@ -34,6 +35,8 @@ indent = {tab-width = 4, unit = "    "}
 file-types = ["md", "txt"]
 [[language.config]]
 ltex.language = "en-US"
+ltex.dictionary = ":~/.config/helix/ltex.dictionary.en-US.txt"
+
 
 [[language]]
 name = "git-commit"
@@ -41,12 +44,24 @@ auto-format = false
 language-server = {command = "ltex-ls"}
 indent = {tab-width = 4, unit = "    "}
 rulers = [80]
+[[language.config]]
+ltex.language = "en-US"
+ltex.dictionary = ":~/.config/helix/ltex.dictionary.en-US.txt"
 
 [[language]]
 name = "latex"
 language-server = {command = "ltex-ls"}
 indent = {tab-width = 4, unit = "    "}
 file-types = ["tex"]
+[[language.config]]
+ltex.language = "en-US"
+ltex.dictionary = ":~/.config/helix/ltex.dictionary.en-US.txt"
+
+[[language]]
+name = "typescript"
+auto-format = false
+indent = {tab-width = 4, unit = "    "}
+language-server = {command = "typescript-language-server", args = ["--stdio"]}
 
 [[language]]
 name = "toml"
@@ -54,10 +69,11 @@ auto-format = false
 indent = {tab-width = 4, unit = "    "}
 
 [[language]]
-name = "typescript"
+name = "yaml"
 auto-format = false
-indent = {tab-width = 4, unit = "    "}
-language-server = {command = "typescript-language-server", args = ["--stdio"]}
+indent = {tab-width = 2, unit = "  "}
+[language.config]
+yaml = {keyOrdering = false}
 
 [[language]]
 name = "css"

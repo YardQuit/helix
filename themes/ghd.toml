@@ -87,6 +87,7 @@
 "ui.virtual.whitespace" = { fg = "ghd_brown" }
 "ui.virtual.indent-guide" = { fg = "ghd_brown" }
 "ui.virtual.inlay-hint" = { fg = "ghd_air_blue"}
+"ui.virtual.wrap" = { fg = "ghd_yellow"}
 "ui.gutter" = { bg = "ghd_default" }
 "ui.gutter.selected" = { bg = "ghd_dark" }
 

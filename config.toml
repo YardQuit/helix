@@ -47,7 +47,7 @@ display-messages = false
 display-inlay-hints = true
 
 [editor.statusline]
-left = ["mode", "spacer", "version-control", "spacer", "spinner", "diagnostics", "spacer", "file-encoding", "file-type", "file-modification-indicator", "file-base-name"]
+left = ["mode", "spacer", "version-control", "spacer", "spinner", "diagnostics", "spacer", "file-encoding", "file-type", "file-modification-indicator", "file-name"]
 right = ["selections", "primary-selection-length", "spacer", "position-percentage", "position", "total-line-numbers"]
 separator = "│"
 
@@ -56,7 +56,10 @@ Y = "yank_main_selection_to_clipboard"
 0 = "goto_line_start"
 G = "goto_last_line"
 X = ["extend_line_above", "extend_to_line_bounds"]
+a = ["move_char_right", "insert_mode"]
 C-q = "wclose"                # close a split-window
+C-l = ":vnew"                 # vertical split new
+C-j = ":hnew"                 # horizontal new
 left = "jump_view_left"       # nav split-window mode
 down = "jump_view_down"       # nav split-window mode
 up = "jump_view_up"           # nav split-window mode
@@ -66,14 +69,15 @@ right = "jump_view_right"     # nav split-window mode
 q = [":reflow 80", "goto_line_start"]
 
 [keys.normal.backspace]
-c = ["kill_to_line_end", "insert_mode"]
-d = "kill_to_line_end"
+c = ["select_mode", "goto_line_end", "yank", "delete_selection", "insert_mode"]
+d = ["select_mode", "goto_line_end", "yank", "delete_selection"]
 f = ":format"
 U = "switch_to_uppercase"
 u = "switch_to_lowercase"
 X = ":q!"
 W = ":wq"
 w = ":w"
+p = ":pwd"
 
 [keys.normal.backspace.t]
 s = ":toggle auto-save"
