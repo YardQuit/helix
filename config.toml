@@ -54,7 +54,7 @@ separator = "│"
 [keys.normal]
 Y = "yank_main_selection_to_clipboard"
 0 = "goto_line_start"
-G = "goto_last_line"
+G = ["goto_last_line", "align_view_center"]
 X = ["extend_line_above", "extend_to_line_bounds"]
 a = ["move_char_right", "insert_mode"]
 C-q = "wclose"                # close a split-window
@@ -70,7 +70,9 @@ q = [":reflow 80", "goto_line_start"]
 
 [keys.normal.backspace]
 c = ["select_mode", "goto_line_end", "yank", "delete_selection", "insert_mode"]
+A = ["select_mode", "goto_line_start", "yank", "delete_selection", "insert_mode"]
 d = ["select_mode", "goto_line_end", "yank", "delete_selection"]
+a = ["select_mode", "goto_line_start", "yank", "delete_selection"]
 f = ":format"
 U = "switch_to_uppercase"
 u = "switch_to_lowercase"
@@ -78,6 +80,7 @@ X = ":q!"
 W = ":wq"
 w = ":w"
 p = ":pwd"
+l = "insert_newline"
 
 [keys.normal.backspace.t]
 s = ":toggle auto-save"
