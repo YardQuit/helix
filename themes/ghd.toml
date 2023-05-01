@@ -13,12 +13,12 @@
 "function.builtin" = { fg = "ghd_purple" }
 "function.method" = { fg = "ghd_light_green" }
 "function.macro" = { fg = "ghd_yellow" }
-"keyword" = { fg = "ghd_red" }
+"keyword" = { fg = "ghd_red" } # impl, struct, enum, trait, let
 "keyword.control.conditional" = { fg = "ghd_red" }
 "keyword.control.repeat" = { fg = "ghd_red" }
 "keyword.control.import" = { fg = "ghd_red" }
 "keyword.operator" = { fg = "ghd_blue" }
-"keyword.function" = { fg = "ghd_red" }
+"keyword.function" = { fg = "ghd_red" } # fn
 "keyword.exception" = { fg = "ghd_red" }
 "keyword.return" = { fg = "ghd_red" }
 "operator" = { fg = "ghd_white" } #####
@@ -34,11 +34,11 @@
 "storage.modifier" = { fg = "ghd_yellow" }
 "tag" = { fg = "ghd_light_green" }
 "label" = { fg = "ghd_blue" }
-"type" = { fg = "ghd_red" }
-"type.builtin" = { fg = "ghd_red" }
+"type" = { fg = "hgd_cream_white" } # type like String, struct names etc. 
+"type.builtin" = { fg = "ghd_light_blue" } # str
 "namespace" = { fg = "ghd_white" }
-"variable" = { fg = "ghd_normal" } #####
-"variable.builtin" = { fg = "ghd_red" }
+"variable" = { fg = "ghd_white" } # variable name
+"variable.builtin" = { fg = "ghd_orange" } # self
 "variable.parameter" = { fg = "ghd_yellow" }
 "variable.other.member" = { fg = "ghd_light_green" }
 "diff.plus" = { fg = "ghd_green" }
@@ -107,18 +107,27 @@ ghd_mark = "#540099"
 ghd_list = "#161b22"
 ghd_normal = "#c9d1d9"
 ghd_white = "#ecf2f8"
+ghd_brass_white = "#d1ccaf"
+ghd_cream_white = "#f2eae9"
+ghd_blue_white = "#ebf0f2"
 ghd_gray = "#8b949e"
+ghd_soft_gray = "#90a19d"
 ghd_brown = "#8b8061"
 ghd_yellow = "#faa356"
 ghd_orange = "#ff6e39"
 ghd_red = "#fa7970"
+ghd_soft_red = "#bf665e"
 ghd_blue = "#1f6feb"
 ghd_light_blue = "#77bdfb"
 ghd_bright_blue = "#9dcef8"
+ghd_soft_blue = "#0897b4"
 ghd_air_blue = "#5D8AA8"
 ghd_green = "#009602"
 ghd_light_green = "#73da7c"
+ghd_soft_green = "#03a696"
+ghd_teal_green = "#00b3ad"
 ghd_purple = "#d2a8ff"
+ghd_soft_pink = "#f4e2de"
 ghd_unknown = "#5500ff"
 
 crimson_harvard = "#a51c30"
