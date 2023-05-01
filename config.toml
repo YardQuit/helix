@@ -16,6 +16,7 @@ auto-completion = true
 completion-trigger-len = 2
 completion-replace = true
 bufferline = "always"
+# lsp.auto-signature-help = false
 
 [editor.cursor-shape]
 insert = "bar"
