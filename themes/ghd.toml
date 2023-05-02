@@ -12,7 +12,7 @@
 "function" = { fg = "ghd_purple" }
 "function.builtin" = { fg = "ghd_purple" }
 "function.method" = { fg = "ghd_light_green" }
-"function.macro" = { fg = "ghd_bright_yellow" } # println! format!
+"function.macro" = { fg = "ghd_light_green" } # println! format!
 "keyword" = { fg = "ghd_red" } # impl, struct, enum, trait, let
 "keyword.control.conditional" = { fg = "ghd_red" }
 "keyword.control.repeat" = { fg = "ghd_red" }
