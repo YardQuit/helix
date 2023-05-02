@@ -12,7 +12,7 @@
 "function" = { fg = "ghd_purple" }
 "function.builtin" = { fg = "ghd_purple" }
 "function.method" = { fg = "ghd_light_green" }
-"function.macro" = { fg = "ghd_yellow" }
+"function.macro" = { fg = "ghd_bright_yellow" } # println! format!
 "keyword" = { fg = "ghd_red" } # impl, struct, enum, trait, let
 "keyword.control.conditional" = { fg = "ghd_red" }
 "keyword.control.repeat" = { fg = "ghd_red" }
@@ -37,7 +37,7 @@
 "type" = { fg = "hgd_cream_white" } # type like String, struct names etc. 
 "type.builtin" = { fg = "ghd_light_blue" } # str
 "namespace" = { fg = "ghd_white" }
-"variable" = { fg = "ghd_white" } # variable name
+"variable" = { fg = "ghd_yellow" } # variable name
 "variable.builtin" = { fg = "ghd_orange" } # self
 "variable.parameter" = { fg = "ghd_yellow" }
 "variable.other.member" = { fg = "ghd_light_green" }
@@ -114,6 +114,8 @@ ghd_gray = "#8b949e"
 ghd_soft_gray = "#90a19d"
 ghd_brown = "#8b8061"
 ghd_yellow = "#faa356"
+ghd_mustard_yellow = "#c2bb00"
+ghd_bright_yellow = "#ffec5c"
 ghd_orange = "#ff6e39"
 ghd_red = "#fa7970"
 ghd_soft_red = "#bf665e"
