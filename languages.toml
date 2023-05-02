@@ -50,7 +50,9 @@ file-types = ["md", "txt"]
 [[language.config]]
 ltex.language = "en-US"
 ltex.dictionary = ":~/.config/helix/ltex.dictionary.en-US.txt"
-
+# ltex-ls binary: https://github.com/valentjn/ltex-ls/releases
+# mv extracted foler to /opt named as ltex-ls
+# PATH="/opt/ltex-ls/bin:$PATH"
 
 [[language]]
 name = "git-commit"
@@ -61,6 +63,9 @@ rulers = [80]
 [[language.config]]
 ltex.language = "en-US"
 ltex.dictionary = ":~/.config/helix/ltex.dictionary.en-US.txt"
+# ltex-ls binary: https://github.com/valentjn/ltex-ls/releases
+# mv extracted foler to /opt named as ltex-ls
+# PATH="/opt/ltex-ls/bin:$PATH"
 
 [[language]]
 name = "latex"
@@ -70,6 +75,9 @@ file-types = ["tex"]
 [[language.config]]
 ltex.language = "en-US"
 ltex.dictionary = ":~/.config/helix/ltex.dictionary.en-US.txt"
+# ltex-ls binary: https://github.com/valentjn/ltex-ls/releases
+# mv extracted foler to /opt named as ltex-ls
+# PATH="/opt/ltex-ls/bin:$PATH"
 
 [[language]]
 name = "typescript"
