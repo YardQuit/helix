@@ -21,7 +21,7 @@
 "keyword.function" = { fg = "ghd_red" } # fn
 "keyword.exception" = { fg = "ghd_red" }
 "keyword.return" = { fg = "ghd_red" }
-"operator" = { fg = "ghd_white" } #####
+"operator" = { fg = "ghd_white" }
 "punctuation" = { fg = "ghd_white" }
 "punctuation.delimiter" = { fg = "ghd_white" }
 "punctuation.bracket" = { fg = "ghd_light_green" }
@@ -33,7 +33,7 @@
 "storage.type" = { fg = "ghd_red" }
 "storage.modifier" = { fg = "ghd_yellow" }
 "tag" = { fg = "ghd_light_green" }
-"label" = { fg = "ghd_blue" }
+"label" = { fg = "ghd_blue" } # 'static, 'a (tic status)
 "type" = { fg = "hgd_cream_white" } # type like String, struct names etc. 
 "type.builtin" = { fg = "ghd_light_blue" } # str
 "namespace" = { fg = "ghd_white" }
@@ -119,7 +119,8 @@ ghd_bright_yellow = "#ffec5c"
 ghd_orange = "#ff6e39"
 ghd_red = "#fa7970"
 ghd_soft_red = "#bf665e"
-ghd_blue = "#1f6feb"
+# ghd_blue = "#1f6feb"
+ghd_blue = "#0099dd"
 ghd_light_blue = "#77bdfb"
 ghd_bright_blue = "#9dcef8"
 ghd_soft_blue = "#0897b4"

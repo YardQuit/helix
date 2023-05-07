@@ -65,6 +65,8 @@ left = "jump_view_left"       # nav split-window mode
 down = "jump_view_down"       # nav split-window mode
 up = "jump_view_up"           # nav split-window mode
 right = "jump_view_right"     # nav split-window mode
+"A-k" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+"A-j" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 
 [keys.normal.g]
 q = [":reflow 80", "goto_line_start"]
