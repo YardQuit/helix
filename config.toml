@@ -56,6 +56,7 @@ separator = "│"
 Y = "yank_main_selection_to_clipboard"
 0 = "goto_line_start"
 G = ["goto_last_line", "align_view_center"]
+V = ["extend_line_below", "select_mode"]
 X = ["extend_line_above", "extend_to_line_bounds"]
 a = ["move_char_right", "insert_mode"]
 C-q = "wclose"                # close a split-window
