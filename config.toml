@@ -108,6 +108,8 @@ c = ":insert-output cat ~/.config/helix/templates/md-snip.clang"
 r = ":insert-output cat ~/.config/helix/templates/md-snip.rust"
 
 [keys.insert]
+"A-k" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+"A-j" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 
 [keys.select]
 Y = "yank_main_selection_to_clipboard"
