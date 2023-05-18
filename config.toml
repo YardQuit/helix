@@ -91,6 +91,7 @@ s = ":toggle auto-save"
 c = ":toggle auto-completion"
 i = ":toggle indent-guides.render"
 h = ":toggle lsp.display-inlay-hints"
+w = ":toggle soft-wrap.enable"
 
 [keys.normal.backspace.i]
 d = ":insert-output date"
