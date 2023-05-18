@@ -88,11 +88,13 @@ language-server = {command = "typescript-language-server", args = ["--stdio"]}
 [[language]]
 name = "toml"
 auto-format = false
+formatter = { command = "prettier", args = ["--parser", "typescript"]}
 indent = {tab-width = 4, unit = "    "}
 
 [[language]]
 name = "yaml"
 auto-format = false
+formatter = { command = "prettier", args = ["--parser", "typescript"]}
 indent = {tab-width = 2, unit = "  "}
 [language.config]
 yaml = {keyOrdering = false}
@@ -100,11 +102,19 @@ yaml = {keyOrdering = false}
 [[language]]
 name = "css"
 auto-format = false
+formatter = { command = "prettier", args = ["--parser", "typescript"]}
 indent = {tab-width = 2, unit = "  "}
 
 [[language]]
 name = "html"
 auto-format = false
+formatter = { command = "prettier", args = ["--parser", "typescript"]}
+indent = {tab-width = 2, unit = "  "}
+
+[[language]]
+name = "tsx"
+auto-format = false
+formatter = { command = "prettier", args = ["--parser", "typescript"]}
 indent = {tab-width = 2, unit = "  "}
 
 [[language]]
@@ -116,5 +126,5 @@ indent = { tab-width = 2, unit = " " }
 language-server = { command = "ols" }
 injection-regex = "odin"
 roots = ["ols.json"]
-formatter = { command = "odinfmt", args = [ "-stdin", "true" ] }
+formatter = { command = "odinfmt", args = ["-stdin", "true" ]}
 
